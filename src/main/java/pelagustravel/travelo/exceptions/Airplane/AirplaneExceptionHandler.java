@@ -18,6 +18,7 @@ public class AirplaneExceptionHandler {
         return new ResponseEntity<>(airplaneException,status);
     }
     @ExceptionHandler(value = {NoAvailableAirplaneException.class})
+    @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public ResponseEntity<Object> noAvailableAirplaneExceptionHandler(NoAvailableAirplaneException noAvailableAirplaneException){
         AirplaneException airplaneException=new AirplaneException();
         HttpStatus status=HttpStatus.NOT_FOUND;

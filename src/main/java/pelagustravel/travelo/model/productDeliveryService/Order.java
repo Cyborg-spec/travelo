@@ -32,7 +32,7 @@ public class Order {
     private boolean isDelivered;
 
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "order")
-    OrderDetails orderDetails;
+    private OrderDetails orderDetails;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "airplane_id")

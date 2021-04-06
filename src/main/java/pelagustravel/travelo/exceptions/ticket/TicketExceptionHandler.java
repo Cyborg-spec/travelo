@@ -29,6 +29,7 @@ public class TicketExceptionHandler {
         return new ResponseEntity<>(ticketException,status);
     }
     @ExceptionHandler(value = {AllSelectedTicketsBoughtException.class})
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     public ResponseEntity<Object> allSelectedTicketBoughtExceptionHandler(AllSelectedTicketsBoughtException allSelectedTicketsBoughtException){
         TicketException ticketException=new TicketException();
         ticketException.setInfo(allSelectedTicketsBoughtException.getMessage());

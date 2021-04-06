@@ -201,7 +201,7 @@ public class EntityToDTOConverter {
 
     public RoleDTO roleToRoleDTO(EmployeeRole role){
         return RoleDTO.builder()
-                .role(role.getEmployeeRoles().name()).build();
+                .role(role.name()).build();
     }
 
 }
