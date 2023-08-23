@@ -67,6 +67,7 @@ public class TicketController {
     }
     @GetMapping("/ticket/available-tickets")
     public Set<TicketDTO> availableTickets(){
+        System.out.println("dfgkdjf");
         return entityToDTOConverter.ticketToTicketDTO(ticketService.availableTickets());
     }
 
